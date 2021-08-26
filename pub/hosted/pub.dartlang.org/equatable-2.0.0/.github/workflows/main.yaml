@@ -1,0 +1,25 @@
+name: build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: google/dart:2.12-dev
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: pub get
+      - name: Format
+        run: dart format .
+      - name: Analyze
+        run: dartanalyzer --fatal-infos --fatal-warnings lib test
+      - name: Run tests
+        run: dart test --coverage=coverage && dart run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.packages --report-on=lib
+      - name: Check Code Coverage
+        uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
