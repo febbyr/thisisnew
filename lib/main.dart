@@ -1,3 +1,4 @@
+import 'package:belajargetx2/request_view.dart';
 import 'package:belajargetx2/routes/router.dart';
 import 'package:flutter/material.dart';
 import 'package:belajargetx2/splash_screen.dart';
@@ -12,8 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
-      getPages: getRoutePages,
-      initialRoute: SplashScreen.TAG,
+      home: RequestView(),
+      // getPages: getRoutePages,
+      // initialRoute: SplashScreen.TAG,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
