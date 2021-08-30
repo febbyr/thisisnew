@@ -1,0 +1,32 @@
+name: flutter_svg_example
+description: An SVG samnple app.
+homepage: https://github.com/dnfield/flutter_svg
+publish_to: none
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg:
+    path: ../
+
+# The following section is specific to Flutter.
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/w3samples/
+    - assets/deborah_ufw/
+    - assets/simple/
+    - assets/wikimedia/
+    - assets/android_vd/
+
+environment:
+  sdk: '>=2.12.0-0 <3.0.0'
+  flutter: ">=1.24.0-6.0.pre"
+
+# dependency_overrides:
+#  sky_engine:
+#    path: /Users/dnfield/engine/src/out/host_debug_unopt/gen/dart-pkg/sky_engine
+#  sky_services:
+#    path: /Users/dnfield/engine/src/out/host_debug_unopt/gen/dart-pkg/sky_services
