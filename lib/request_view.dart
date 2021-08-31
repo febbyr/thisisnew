@@ -28,12 +28,12 @@ class _RequestViewState extends State<RequestView> {
     try {
       var jsonResponse = await http.get(CARD_URL);
       if (jsonResponse.statusCode == 200) {
-        final jsonItems = json.decode(jsonResponse.body);
+        final jsonItems =
+            json.decode(jsonResponse.body).cast<Map<String, dynamic>>();
 
-        requestview = jsonItems.map((json) {
+        requestview = jsonItems.map<RequestModel>((json) {
           return RequestModel.fromJson(json);
-        });
-        return requestview;
+        }).toList();
       }
     } catch (e) {}
     return requestview;
