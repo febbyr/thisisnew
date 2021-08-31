@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 import 'package:toast/toast.dart';
 
 class SignInPage extends StatefulWidget {
+  static final String TAG = '/SignInPage';
   const SignInPage({Key key}) : super(key: key);
 
   @override

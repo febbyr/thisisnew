@@ -1,4 +1,5 @@
 import 'package:belajargetx2/page1.dart';
+import 'package:belajargetx2/sign_in_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(Duration(seconds: 3))
-        .then((value) => Get.offNamed(Page1.TAG));
+        .then((value) => Get.offNamed(SignInPage.TAG));
     super.initState();
   }
 

@@ -1,3 +1,4 @@
+import 'package:belajargetx2/sign_in_page.dart';
 import 'package:belajargetx2/splash_screen.dart';
 import 'package:get/get.dart';
 import 'package:belajargetx2/page1.dart';
@@ -6,6 +7,7 @@ import '../page2.dart';
 import '../page3.dart';
 import '../page4.dart';
 import '../page5.dart';
+import '../sign_in_page.dart';
 
 List<GetPage> get getRoutePages => _routePages;
 
@@ -16,4 +18,5 @@ List<GetPage> _routePages = [
   GetPage(name: Page3.TAG, page: () => Page3()),
   GetPage(name: Page4.TAG, page: () => Page4()),
   GetPage(name: Page5.TAG, page: () => Page5()),
+  GetPage(name: SignInPage.TAG, page: () => SignInPage()),
 ];
