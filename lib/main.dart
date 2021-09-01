@@ -1,4 +1,5 @@
 import 'package:belajargetx2/landing_page.dart';
+import 'package:belajargetx2/page2.dart';
 import 'package:belajargetx2/request_view.dart';
 import 'package:belajargetx2/routes/router.dart';
 import 'package:belajargetx2/sign_in_page.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       home: LandingPage(),
-      // getPages: getRoutePages,
+      getPages: getRoutePages,
       // initialRoute: SplashScreen.TAG,
       theme: ThemeData(
         primarySwatch: Colors.blue,

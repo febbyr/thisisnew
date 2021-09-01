@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:http/http.dart' as http;
 import 'package:toast/toast.dart';
+import 'package:get/get.dart';
 
 class SignInPage extends StatefulWidget {
   static final String TAG = '/SignInPage';
@@ -20,7 +21,7 @@ class _SignInPageState extends State<SignInPage> {
   bool isLoading = false;
 
   Future SignInPage() async {
-    Uri ADD_URL = Uri.parse("http://192.168.43.57/connectdb/login.php");
+    Uri ADD_URL = Uri.parse("https://syclara.qmuaji.com/connectdb/login.php");
     var response = await http.post(ADD_URL, body: {
       "username": usernameController.text,
       "password": passwordController.text,
